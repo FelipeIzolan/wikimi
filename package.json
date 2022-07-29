@@ -1,0 +1,16 @@
+{
+  "name": "wikimi",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node index.ts"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "docx": "^7.4.0"
+  }
+}
