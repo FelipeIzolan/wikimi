@@ -8,7 +8,10 @@ function extractText(content: string[], index: number): string {
 	let i = index + 1;
 
 	while (!content[i].startsWith("=")) {
-		text += content[i] + "\n";
+		if (content[i] !== "") {
+			text += content[i] + "\n";
+		}
+
 		i++;
 	}
 
