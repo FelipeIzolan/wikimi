@@ -10,7 +10,7 @@ const { Document, Paragraph, TextRun, Packer, AlignmentType } = docx;
 function createDocument(docTitle: documentTitle, docContent: documentContent): void {
 	var content = []
 	var title = new Paragraph({
-    children: [ new TextRun({ text: docTitle.toUpperCase(), bold: true, size: 72 }) ],
+    children: [ new TextRun({ text: docTitle, bold: true, size: 72 }) ],
     alignment: AlignmentType.CENTER
   })
 
@@ -35,9 +35,10 @@ function createDocument(docTitle: documentTitle, docContent: documentContent): v
 	}
 
   const document = new Document({ sections: [{ children: [title, ...content] }] });
+	const documentFile = `./src/${docTitle.replace(/[:/|\*<>?"]/, ``)}.docx`
 
   Packer.toBuffer(document)
-		.then(buffer => fs.writeFileSync(`./src/${docTitle}.docx`, buffer))
+		.then(buffer => fs.writeFileSync(documentFile, buffer))
 }
 
 export default createDocument;
