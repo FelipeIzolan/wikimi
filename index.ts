@@ -2,7 +2,7 @@ import input from "./src/scripts/input.js";
 import fetch from "./src/scripts/fetch.js";
 import createDocument from "./src/scripts/create_document.js";
 import { searchURL, contentURL } from "./src/scripts/wikipedia_api.js";
-import { formatContent } from "./src/scripts/format_content.js";
+import formatContent from "./src/scripts/format_content.js";
 import type { documentTitle, documentContent } from "./src/scripts/create_document.js";
 
 async function main(): Promise<void> {

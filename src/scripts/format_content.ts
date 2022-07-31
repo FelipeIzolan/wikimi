@@ -43,5 +43,5 @@ function formatContent(content: string): Array<contentFragment> {
 	return contentFormated;
 }
 
-export { formatContent }
+export default formatContent
 export type { contentFragment }
