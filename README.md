@@ -13,6 +13,7 @@ Wikimi is a bot/cli that get a content from wikipedia and generate a docx docume
 ## How to use
 ```
 > git clone https://github.com/FelipeIzolan/wikimi.git
+> cd ./wikimi
 > npm install
 > npm start
 ```
